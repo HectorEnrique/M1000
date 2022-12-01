@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../build/css/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../build/img/logo.webp"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Mytems - Productos</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navegacion">
+        <a href="https://m1000hector.netlify.app/"
+          ><img src="../build/img/logo.png" alt="Imagen Logo"
+        /></a>
+        <ul class="navegacion__items" id="itemsMenu">
+          <li>
+            <a href="https://m1000hector.netlify.app/" class="navegacion__item"
+              >Hogar</a
+            >
+          </li>
+          <li>
+            <a href="productos.html" class="navegacion__item">Productos</a>
+          </li>
+          <li>
+            <a href="../index.html#faqs" class="navegacion__item">FAQ's</a>
+          </li>
+          <li>
+            <a href="../index.html#testimonios" class="navegacion__item"
+              >Testimonios</a
+            >
+          </li>
+          <li>
+            <a href="#contacto" class="navegacion__item">Información Extra</a>
+          </li>
+          <li class="navegacion__li--btns">
+            <a href="#" class="navegacion__btn">Unirse</a>
+            <a href="#" class="navegacion__btn">Ingresar</a>
+          </li>
+        </ul>
+        <ul class="navegacion__interacciones">
+          <li>
+            <a href="pages/cesta.html" class="navegacion__li">
+              <i class="bx bx-cart"></i>
+              <p class="navegacion__numero--articulos" id="Narticulos">0</p>
+            </a>
+          </li>
+          <li class="menu"><i class="bx bx-menu"></i></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="productos productos--page" id="productosMain">
+      <div class="">
+        <h2 class="productos__heading">Productos</h2>
+        <nav class="productos__navegacion">
+          <ul class="productos__navegacionItems contenedor">
+            <li>
+              <a href="#" class="productos__navegacionItem">Destacados</a>
+            </li>
+            <li><a href="#" class="productos__navegacionItem">Nuevos</a></li>
+            <li>
+              <a href="#" class="productos__navegacionItem">Membresias</a>
+            </li>
+            <li>
+              <a href="#" class="productos__navegacionItem">Próximamente</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cards contenedor" id="productos">
+          <div class="card__contenido">
+            <a href="casaDelArbol.html" class="card__imagen">
+              <img src="../build/img/voxelArt1.webp" alt="Imagen producto" />
+            </a>
+            <div class="card__informacion">
+              <h3 class="card__heading">Casa del Arbol</h3>
+              <div class="card__estrellas">
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/med-Star.svg" alt="imagen midEstrella" />
+              </div>
+              <p class="card__descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Consequat elementum, viverra interdum vitae rhoncus.
+              </p>
+              <p class="card__precio">$860</p>
+              <div class="card__interacciones">
+                <a href="#" class="card__anadir" id="addProducto" data-id="1"
+                  >Añadir</a
+                >
+                <div class="card__microInteracciones">
+                  <i class="bx bx-heart card__corazon"></i>
+                  <i class="bx bx-share-alt card__compartir" data-id="1"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--card-->
+          <div class="card__contenido">
+            <a href="restaurante.html" class="card__imagen">
+              <img src="../build/img/voxelArt2.webp" alt="Imagen producto" />
+            </a>
+            <div class="card__informacion">
+              <h3 class="card__heading">Restaurante</h3>
+              <div class="card__estrellas">
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/med-Star.svg" alt="imagen midEstrella" />
+              </div>
+              <p class="card__descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Consequat elementum, viverra interdum vitae rhoncus.
+              </p>
+              <p class="card__precio">$1600</p>
+              <div class="card__interacciones">
+                <a href="#" class="card__anadir" id="addProducto" data-id="2"
+                  >Añadir</a
+                >
+                <div class="card__microInteracciones">
+                  <i class="bx bx-heart card__corazon"></i>
+                  <i class="bx bx-share-alt card__compartir" data-id="2"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--card-->
+          <div class="card__contenido">
+            <a href="castilloEnRuinas.html" class="card__imagen">
+              <img src="../build/img/voxelArt3.webp" alt="Imagen producto" />
+            </a>
+            <div class="card__informacion">
+              <h3 class="card__heading">Castillo en Ruinas</h3>
+              <div class="card__estrellas">
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/med-Star.svg" alt="imagen midEstrella" />
+              </div>
+              <p class="card__descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Consequat elementum, viverra interdum vitae rhoncus.
+              </p>
+              <p class="card__precio">$3400</p>
+              <div class="card__interacciones">
+                <a href="#" class="card__anadir" id="addProducto" data-id="3"
+                  >Añadir</a
+                >
+                <div class="card__microInteracciones">
+                  <i class="bx bx-heart card__corazon"></i>
+                  <i class="bx bx-share-alt card__compartir" data-id="3"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--card-->
+          <div class="card__contenido">
+            <a href="casaDeMinecraft.html" class="card__imagen">
+              <img src="../build/img/voxelArt4.webp" alt="Imagen producto" />
+            </a>
+            <div class="card__informacion">
+              <h3 class="card__heading">Casa de Minecraft</h3>
+              <div class="card__estrellas">
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/med-Star.svg" alt="imagen midEstrella" />
+              </div>
+              <p class="card__descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Consequat elementum, viverra interdum vitae rhoncus.
+              </p>
+              <p class="card__precio">$200</p>
+              <div class="card__interacciones">
+                <a href="#" class="card__anadir" id="addProducto" data-id="4"
+                  >Añadir</a
+                >
+                <div class="card__microInteracciones">
+                  <i class="bx bx-heart card__corazon"></i>
+                  <i class="bx bx-share-alt card__compartir" data-id="4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--card-->
+          <div class="card__contenido">
+            <a href="voxelCity.html" class="card__imagen">
+              <img src="../build/img/voxelArt5.jpg" alt="Imagen producto" />
+            </a>
+            <div class="card__informacion">
+              <h3 class="card__heading">City</h3>
+              <div class="card__estrellas">
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/med-Star.svg" alt="imagen midEstrella" />
+              </div>
+              <p class="card__descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Consequat elementum, viverra interdum vitae rhoncus.
+              </p>
+              <p class="card__precio">$1038</p>
+              <div class="card__interacciones">
+                <a href="#" class="card__anadir" id="addProducto" data-id="5"
+                  >Añadir</a
+                >
+                <div class="card__microInteracciones">
+                  <i class="bx bx-heart card__corazon"></i>
+                  <i class="bx bx-share-alt card__compartir" data-id="5"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--card-->
+          <div class="card__contenido">
+            <a href="voxelDormitorio.html" class="card__imagen">
+              <img src="../build/img/voxelArt6.png" alt="Imagen producto" />
+            </a>
+            <div class="card__informacion">
+              <h3 class="card__heading">Dormitorio</h3>
+              <div class="card__estrellas">
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/star.svg" alt="imagen estrella" />
+                <img src="../build/img/med-Star.svg" alt="imagen midEstrella" />
+              </div>
+              <p class="card__descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Consequat elementum, viverra interdum vitae rhoncus.
+              </p>
+              <p class="card__precio">$1000</p>
+              <div class="card__interacciones">
+                <a href="#" class="card__anadir" id="addProducto" data-id="6"
+                  >Añadir</a
+                >
+                <div class="card__microInteracciones">
+                  <i class="bx bx-heart card__corazon"></i>
+                  <i class="bx bx-share-alt card__compartir" data-id="6"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--card-->
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer footer--bg" id="contacto">
+      <h2 class="footer__heading">Contacto</h2>
+      <div class="footer__contenido contenedor">
+        <div class="footer__card">
+          <h3 class="footer__subtitulo">Más información</h3>
+          <p class="footer__info">
+            Diam eget erat ac id. Elit amet, vestibulum diam sed aliquam lectus.
+            Orci eget facilisi sagittis dapibus nec at. Augue quis dictum odio
+            dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Id sit proin justo varius augue eu. Mattis vulputate amet enim
+            aliquet dignissim aliquam.
+          </p>
+          <a href="#" class="footer__btn">Conocer más</a>
+        </div>
+        <form class="footer__formulario">
+          <input
+            type="text"
+            class="footer__input"
+            placeholder="Hector Jiménez"
+          />
+          <input
+            type="email"
+            class="footer__input"
+            placeholder="hect.jimenez09@gmail.com"
+          />
+          <textarea name="" id="" cols="30" rows="10" class="footer__textarea">
+Redactando...😋</textarea
+          >
+          <button type="submit" class="footer__enviar">Envíar</button>
+        </form>
+      </div>
+      <p class="footer__copyright">
+        © 2022
+        <a
+          class="footer__copyright--rojo"
+          href="https://twitter.com/Hctor7656"
+          target="_blank"
+          >Hector Jiménez</a
+        >| Todos los derechos reservados.
+      </p>
+    </footer>
+    <script src="../build/js/cards.js"></script>
+    <script src="../build/js/menu.js"></script>
+  </body>
+</html>

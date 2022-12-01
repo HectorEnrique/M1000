@@ -1,0 +1,42 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.testimonios {
+  &__testimonio {
+    display: block;
+    background-color: v.$complemento;
+    padding: 2rem;
+    border-radius: 2rem;
+    border-top: 1px solid #456586;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 37px -12px rgba(0 0 0 / 0.75);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__img {
+    width: 6rem;
+    height: 6rem;
+    border: 1px solid v.$blanco;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__autor {
+    font-weight: 600;
+  }
+  &__comentario {
+    color: #fff;
+    opacity: 0.8;
+    font-weight: 400;
+    margin: 1rem 0 0 0;
+    font-size: 1.4rem;
+    @include m.tablet{
+      font-size: 1.4rem;
+    }
+    @include m.desktop{
+      font-size: 1.6rem;
+    }
+  }
+}

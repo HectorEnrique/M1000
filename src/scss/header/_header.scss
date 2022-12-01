@@ -1,0 +1,139 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+%btnV2 {
+  border-radius: 1rem;
+  border-top: 1px solid #9cbdef;
+  background-color: v.$azul;
+  letter-spacing: 0.1rem;
+  padding: 1.1rem 2.1rem;
+  font-family: v.$panton;
+  color: v.$blanco;
+  font-size: 2rem;
+  transition-property: background-color, border-top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &::selection {
+    background: transparent;
+  }
+  &:hover {
+    background: #6688bd;
+    border-top: 1px solid #7ea0d5;
+  }
+  &:active {
+    background: #5978a6;
+    border-top: 1px solid #7497cc;
+  }
+}
+
+.header {
+  height: 155vh;
+  width: 100%;
+  background-image: url(../img/headerMovil.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @include m.tablet {
+    height: 100vh;
+  }
+  @include m.desktop {
+    height: 120vh;
+    background-image: url(../img/imgHeader.svg);
+    background-position: center center;
+  }
+  &__contenido {
+    padding-top: 15rem;
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: v.$rem5;
+      align-items: center;
+    }
+    @include m.desktop {
+      @include m.grid(2, v.$rem5);
+      align-items: center;
+    }
+  }
+  &__heading {
+    text-align: center;
+    line-height: 1.5;
+    @include m.tablet {
+      text-align: left;
+      line-height: 1.5;
+    }
+    &--color {
+      color: v.$azul;
+    }
+  }
+  &__card {
+    margin-top: v.$rem5;
+    background-color: v.$primario;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    gap: 3rem;
+    align-items: center;
+    box-shadow: 1px 0px 46px 5px rgba(0, 0, 0, 0.75);
+    border-top: 1px solid #3d5163;
+    @include m.tablet {
+      margin-top: 0;
+      align-items: flex-start;
+    }
+    @include m.desktop {
+      margin-top: 0;
+      align-items: flex-start;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &__info {
+    text-align: center;
+    margin: 0;
+    @include m.tablet {
+      text-align: left;
+    }
+    @include m.desktop {
+      text-align: left;
+    }
+  }
+  &__btn {
+    @extend %btnV2;
+  }
+  &__imagen {
+    grid-column: 1 / 3;
+    position: relative;
+    z-index: 1;
+    @include m.animation(
+      islaFlotante,
+      infinite,
+      10s,
+      cubic-bezier(0.57, -0.01, 0.47, 0.99)
+    );
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      filter: drop-shadow(-10px 10px 21px rgba(0, 0, 0, 1));
+      position: relative;
+      @include m.tablet{
+        width: 60%;
+        position: relative;
+        top: -3rem;
+      }
+      @include m.desktop{
+        top: -15rem;
+      }
+    }
+    @keyframes islaFlotante {
+      0% {
+        transform: translateY(1rem);
+      }
+      50% {
+        transform: translateY(-1rem);
+      }
+      100% {
+        transform: translateY(1rem);
+      }
+    }
+  }
+}

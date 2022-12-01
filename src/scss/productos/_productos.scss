@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.productos{
+  position: relative;
+  &--page{
+    padding-top: 15rem;
+  }
+  &__contenido{
+    background-color: v.$primario;
+    border-radius: 2rem;
+    margin-top: -10rem;
+    box-shadow: 0px -19px 49px -9px rgba(0,0,0,.5);
+    border-top: 1px solid #46617C;
+    padding-top: calc(v.$rem5 * 2);
+    padding-bottom: v.$rem5;
+  }
+  &__heading, &__navegacionItem{
+    position: relative;
+    z-index: 1;
+  }
+  &__heading{
+    text-align: center;
+    padding-bottom: v.$rem5;
+  }
+  &__navegacionItems{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    padding-bottom: v.$rem5;
+  }
+  &__navegacionItem{
+    transition: color .3s ease;
+    &:hover{
+      color: v.$azul
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+%btnV2 {
+  border-radius: 1rem;
+  border-top: 1px solid #9cbdef;
+  background-color: v.$azul;
+  letter-spacing: 0.1rem;
+  padding: 1.1rem 2.1rem;
+  font-family: v.$panton;
+  text-align: center;
+  color: v.$blanco;
+  transition-property: background-color, border-top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &::selection {
+    background: transparent;
+  }
+  &:hover {
+    background: #6688bd;
+    border-top: 1px solid #7ea0d5;
+  }
+  &:active {
+    background: #5978a6;
+    border-top: 1px solid #7497cc;
+  }
+}
+
+%btnv3 {
+  background: #f05454;
+  border-top: 1px solid #ff7878;
+  padding: 1rem 2.2rem;
+  font-family: v.$inter;
+  text-align: center;
+  border-radius: 1rem;
+  font-weight: 400;
+  color: v.$blanco;
+  transition-property: background-color, border-top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &::selection {
+    background: transparent;
+  }
+  &:hover {
+    background: #d14848;
+    border-top: 1px solid #f17a7a;
+  }
+  &:active {
+    background: #bc3838;
+    border-top: 1px solid #d75d5d;
+  }
+}
+
+.cards {
+  @include m.tablet {
+    @include m.grid(2, v.$rem5);
+  }
+  @include m.desktop {
+    @include m.grid(3, v.$rem5);
+  }
+  &__vermas {
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    @extend %btnV2;
+  }
+}
+.card {
+  &__contenido {
+    box-shadow: 0 0 30px 0 rgba(0 0 0 / 0.25);
+    border-radius: 2rem;
+    @include m.mobil{
+      margin-bottom: 3rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__imagen {
+    border-radius: 2rem;
+    border: 1px solid #577797;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 45rem;
+        height: 30rem;
+        object-fit: cover;
+      @include m.tablet {
+        width: 40rem;
+        height: 30rem;
+        object-fit: cover;
+      }
+      @include m.tablet {
+        width: 40rem;
+        height: 30rem;
+      }
+    }
+  }
+  &__informacion {
+    margin-top: -(v.$rem5);
+    border-top: 1px solid #577797;
+    background-color: v.$complemento;
+    border-radius: 2rem;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  &__heading {
+    color: v.$blanco;
+  }
+  &__estrellas {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    img {
+      width: 1.5rem;
+    }
+  }
+  &__descripcion {
+    opacity: 0.5;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    @include m.tablet{
+      font-size: 1.4rem;
+    }
+    @include m.desktop{
+      font-size: 1.6rem;
+    }
+  }
+  &__precio {
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 1rem 0 1rem 0;
+  }
+  &__interacciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__anadir {
+    @extend %btnv3;
+  }
+  &__microInteracciones {
+    display: flex;
+    gap: 1rem;
+  }
+  &__compartir,
+  &__corazon {
+    font-size: 3.5rem;
+    color: v.$blanco;
+  }
+}

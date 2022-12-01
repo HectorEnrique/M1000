@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "panton";
+  src: url(../fonts/Panton-BlackCaps.otf);
+}
+
+$primario: #222831;
+$secundario: #f05454;
+$blanco: #ffffff;
+$azul: #7a99c8;
+$complemento: #30475e;
+
+//separaciones
+$rem5: 5rem;
+
+//fuentes:
+$inter: "Inter", sans-serif;
+$panton: "panton";
+
+//tamaños fuente mobil/tablet
+$h1M: 4.6rem;
+$h2M: 3.6rem;
+$h3M: 2.4rem;
+$pM: 1.6rem;
+$dM: 1.4rem;
+
+//fuentes: pc
+$h1D: 6.4rem;
+$h2D: 4rem;
+$h3D: 2.9rem;
+$pD: 2rem;
+$dD: 1.6rem;
+
+//mixins
+$mobil: 767px;
+$tablet1: 768px;
+$tablet2: 1023px;
+$desktop: 1024px;

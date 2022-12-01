@@ -1,0 +1,83 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+%btnV1 {
+  border-radius: 1rem;
+  border-top: 1px solid #ff7d7d;
+  background-color: v.$secundario;
+  padding: 1.1rem 2.1rem;
+  font-family: v.$inter;
+  font-size: 2rem;
+  color: v.$blanco;
+  font-weight: 600;
+  cursor: pointer;
+  transition-property: background-color, border-top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &::selection {
+    background: transparent;
+  }
+  &:hover {
+    @extend %btnV1;
+    border-top: 1px solid #e97171;
+    background-color: #d04b4b;
+  }
+  &:active {
+    border-top: 1px solid #d75d5d;
+    background-color: #bc3838;
+  }
+}
+
+.carrito {
+  position: fixed;
+  margin-top: 1rem;
+  right: 20rem;
+  top: 10rem;
+  z-index: 3;
+  backdrop-filter: blur(1rem);
+  background: rgba(48, 71, 94, .5);
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 1px solid v.$azul;
+  &__img {
+    width: 10rem;
+    border: 1px solid v.$blanco;
+    border-radius: 1rem;
+  }
+  tr {
+    font-family: v.$inter;
+    th,
+    td {
+      color: v.$blanco;
+      text-align: center;
+    }
+    th {
+      padding: 0 2rem 2rem 2rem;
+    }
+  }
+  &__cesta {
+    margin-top: 2rem;
+    border-top: 1px solid v.$azul;
+  }
+  &__total {
+    font-size: 3rem;
+    margin: 1rem 0;
+    font-weight: 600;
+  }
+  &__vaciar {
+    display: block;
+    text-align: center;
+    @extend %btnV1;
+  }
+}
+
+.borrar-curso {
+  font-family: v.$panton;
+  font-size: 3rem;
+  display: block;
+  background-color: v.$secundario;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}

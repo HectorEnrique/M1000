@@ -1,0 +1,28 @@
+@use 'variables' as v;
+
+@mixin mobil {
+  @media screen and (max-width: v.$mobil) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: v.$tablet1) and (max-width: v.$tablet2) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: v.$desktop) {
+    @content;
+  }
+}
+@mixin animation($nombre, $iterador, $duracion, $transicion) {
+  animation-name: $nombre;
+  animation-iteration-count: $iterador;
+  animation-duration: $duracion;
+  animation-timing-function: $transicion;
+}
+@mixin grid($columnas, $espacio) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espacio;
+}

@@ -1,0 +1,83 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: v.$primario;
+  font-size: 1.6rem;
+  p,
+  a,
+  label,
+  input {
+    font-family: v.$inter;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  h1 {
+    font-family: v.$panton;
+    font-size: v.$h1M;
+    color: v.$blanco;
+    @include m.desktop {
+      font-size: v.$h1D;
+    }
+  }
+  h2 {
+    font-family: v.$panton;
+    font-size: v.$h2M;
+    color: v.$blanco;
+    @include m.tablet{
+      font-size: v.$h2M;
+    }
+    @include m.desktop {
+      font-size: v.$h2D;
+    }
+  }
+  h3 {
+    font-family: v.$panton;
+    font-size: v.$h3M;
+    @include m.tablet {
+      font-size: v.$h3M;
+    }
+    @include m.desktop {
+      font-size: v.$h3D;
+    }
+  }
+  p {
+    line-height: 1.5;
+    color: v.$blanco;
+    font-size: v.$pM;
+    @include m.tablet {
+      font-size: v.$pM;
+    }
+    @include m.desktop {
+      font-size: v.$pD;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: v.$blanco;
+    font-weight: 600;
+  }
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+}

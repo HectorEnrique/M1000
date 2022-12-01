@@ -1,0 +1,94 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+%btnV2 {
+  border-radius: 1rem;
+  border-top: 1px solid #9cbdef;
+  background-color: v.$azul;
+  letter-spacing: 0.1rem;
+  padding: 1.1rem 2.1rem;
+  font-family: v.$panton;
+  text-align: center;
+  color: v.$blanco;
+  transition-property: background-color, border-top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &::selection {
+    background: transparent;
+  }
+  &:hover {
+    background: #6688bd;
+    border-top: 1px solid #7ea0d5;
+  }
+  &:active {
+    background: #5978a6;
+    border-top: 1px solid #7497cc;
+  }
+}
+
+.testimonios {
+  padding-top: v.$rem5;
+  position: relative;
+  &__heading {
+    text-align: center;
+    padding-bottom: v.$rem5;
+  }
+  &__gradient {
+    height: 20rem;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(19, 25, 35, 0) 0%, #222831 80.33%);
+    transition-property: height background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    &--active {
+      background: linear-gradient(
+        180deg,
+        rgba(19, 25, 35, 0) 0%,
+        #222831 40.33%
+      );
+      height: 10rem;
+    }
+  }
+  &__overflow {
+    overflow-y: hidden;
+    height: 100rem;
+    &--active {
+      overflow-y: scroll;
+    }
+    @include m.tablet {
+      height: 45rem;
+    }
+    @include m.desktop {
+      height: 50rem;
+    }
+  }
+  &__vermas {
+    @extend %btnV2;
+    display: block;
+    margin: 0 auto;
+    width: 20rem;
+    position: relative;
+    bottom: 10rem;
+    transition: bottom 0.3s ease;
+    z-index: 2;
+  }
+}
+
+.testimonios__overflow {
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: v.$complemento;
+    outline: 1px solid v.$azul;
+    border-radius: 2px;
+  }
+}
+//#bcbcbc

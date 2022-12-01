@@ -1,0 +1,28 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.preguntas {
+  padding-top: v.$rem5;
+  border-top: 1px solid v.$blanco;
+  border-bottom: 1px solid v.$blanco;
+  background-image: url(../img/gradientefaqs.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__heading {
+    text-align: center;
+    &--lower{
+      font-size: 2rem;
+    }
+  }
+  &__contenido {
+    margin: v.$rem5 0;
+  }
+  &__grid {
+    @include m.tablet {
+      @include m.grid(2, v.$rem5);
+    }
+    @include m.desktop {
+      @include m.grid(2, v.$rem5);
+    }
+  }
+}

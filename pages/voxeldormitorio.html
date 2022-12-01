@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../build/css/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../build/img/logo.webp"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Dormitorio</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navegacion">
+        <a href="https://m1000hector.netlify.app/"
+          ><img src="../build/img/logo.png" alt="Imagen Logo"
+        /></a>
+        <ul class="navegacion__items" id="itemsMenu">
+          <li>
+            <a href="https://m1000hector.netlify.app/" class="navegacion__item"
+              >Hogar</a
+            >
+          </li>
+          <li>
+            <a href="productos.html" class="navegacion__item">Productos</a>
+          </li>
+          <li>
+            <a href="../index.html#faqs" class="navegacion__item">FAQ's</a>
+          </li>
+          <li>
+            <a href="../index.html#testimonios" class="navegacion__item"
+              >Testimonios</a
+            >
+          </li>
+          <li>
+            <a href="../index.html#contacto" class="navegacion__item"
+              >Información Extra</a
+            >
+          </li>
+          <li class="navegacion__li--btns">
+            <a href="#" class="navegacion__btn">Unirse</a>
+            <a href="#" class="navegacion__btn">Ingresar</a>
+          </li>
+        </ul>
+        <ul class="navegacion__interacciones">
+          <li>
+            <a href="pages/cesta.html" class="navegacion__li">
+              <i class="bx bx-cart"></i>
+              <p class="navegacion__numero--articulos" id="Narticulos">0</p>
+            </a>
+          </li>
+          <li class="menu"><i class="bx bx-menu"></i></li>
+        </ul>
+      </nav>
+    </header>
+
+    <article class="modelo" id="productosMain">
+      <div class="modelo__contenido contenedor">
+        <div class="modelo__flecha">
+          <a href="productos.html">
+            <i class="bx bx-right-arrow-circle"></i>
+          </a>
+        </div>
+        <div class="modelo__grid">
+          <div class="modelo__imagen">
+            <img src="../build/img/voxelArt6.png" alt="Imagen Producto" />
+          </div>
+          <div class="modelo__descripcion">
+            <header class="modelo__header">
+              <h3 class="modelo__heading">Voxel Dormitorio</h3>
+              <div class="modelo__estrellas">
+                <img src="../build/img/star.svg" alt="Imagen Estrella" />
+                <img src="../build/img/star.svg" alt="Imagen Estrella" />
+                <img src="../build/img/star.svg" alt="Imagen Estrella" />
+                <img src="../build/img/star.svg" alt="Imagen Estrella" />
+                <img src="../build/img/med-Star.svg" alt="Imagen Estrella" />
+              </div>
+            </header>
+            <p class="modelo__info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh orci
+              leo placerat suspendisse euismod scelerisque. Enim, eu vestibulum
+              faucibus lorem mi. Id quis duis enim gravida sodales augue.
+              Pretium, aenean massa, varius in donec ultrices diam sed. Aliquam
+              facilisi lectus vitae sit imperdiet. Pellentesque lectus et neque
+              nulla urna venenatis massa. Nunc aliquam egestas tortor posuere
+              aliquet ullamcorper. Convallis vel, donec facilisis neque duis in
+              massa. Facilisis porttitor tempor nec, praesent morbi pulvinar.
+              Tempor, elementum dis a sit vitae. Nulla ac pretium ornare eget
+              quam sollicitudin vitae dignissim mattis. Id condimentum in turpis
+              dui. Sodales mi volutpat etiam neque vitae. Donec adipiscing
+              pulvinar pulvinar eu, mus.
+            </p>
+            <p class="card__precio card__precio--center">$1000</p>
+            <div class="card__interacciones">
+              <a href="#" class="card__anadir" id="addProducto" data-id="6"
+                >Añadir</a
+              >
+              <div class="card__microInteracciones">
+                <i class="bx bx-heart card__corazon"></i>
+                <i class="bx bx-share-alt card__compartir" data-id="6"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <script src="../build/js/menu.js"></script>
+    <script src="../build/js/cards.js"></script>
+  </body>
+</html>
